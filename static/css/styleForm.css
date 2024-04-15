@@ -40,12 +40,12 @@ body {
     width: 100%;
     padding: 10px;
     border: none;
-    background-color: #5cb85c;
+    background-color: #000000;
     color: white;
     border-radius: 5px;
     cursor: pointer;
   }
 
   button:hover {
-    background-color: #4cae4c;
+    background-color: #4e4e4e;
   }

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./static/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="registrarse.html">Usuario</a></li>
+          </ul>
+        </nav>
+      </header>
+
+    <div id="productos-container">
+       
+        <div id="filtros">
+            <span class="tituloBarra">0 productos</span>
+
+            <div id="opciones">
+                <div class="tituloFiltro">
+                    <span class="tituloBarra">Mostrar Filtros</span>
+                    <img id="imgFiltro" src="./static/img/filtro.svg" alt="">
+                </div>
+                <div class="tituloFiltro">
+                    <span class="tituloBarra">Ordenar por</span>
+                    <img src="./static/img/drop-down.svg" alt="" srcset="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="productos">
+        <div id="filtro-barra">
+         <ul class="filtro-lista">
+             <li class="filtro-categoria" id="opcion-principal"><span class="tituloBarra">Filtros</span><span id="subrayado">Limpiar filtros</span></li>
+             <li class="filtro-categoria"><h1 class="tituloBarra">Categoria</h1></li>
+             <li class="filtro-categoria"><h2 class="tituloBarra">Talle</h2></li>
+             <li class="filtro-categoria"><h3 class="tituloBarra">Color</h3></li>
+             <li class="filtro-categoria"><h4 class="tituloBarra">Colecciones</h4></li>
+             <li class="filtro-categoria"><h5 class="tituloBarra">Altura</h5></li>
+             <li class="filtro-categoria"><h6 class="tituloBarra">Atletas</h6></li>
+             <li class="filtro-categoria"><h6 class="tituloBarra">Descuentos</h6></li>
+         </ul>
+        </div>
+        <div class="calzado">
+            <div id="card">
+                <img class="imgCard" src="./static/img/air-force-1.png" alt="">
+                <p>Precio: </p>
+                <p>Air Force 1</p>
+            </div>
+
+            <div class="card">
+                <img class="imgCard" src="./static/img/yeezy.jpg" alt="" width="592" height="592">
+                <p>Precio: </p>
+                <p>Yeezy Boost 350</p>
+            </div>
+
+            <div class="card">
+                <img class="imgCard" src="./static/img/fila-disruptor.jpg" alt="" width="592" height="592">
+                <p>Precio: </p>
+                <p>Fila Disruptor</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h4>Nuestra Empresa</h4>
+                    <ul>
+                        <li><a href="#">Sobre nosotros</a></li>
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">Sucursales</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Soporte</h4>
+                    <ul>
+                        <li><a href="#">Preguntas frecuentes</a></li>
+                        <li><a href="#">Envíos y devoluciones</a></li>
+                        <li><a href="#">Términos de servicio</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Síguenos</h4>
+                    <ul>
+                        <li><a href="https://web.facebook.com" target="_blank">Facebook</a></li>
+                        <li><a href="https:/Instagram.com" target="_blank">Instagram</a></li>
+                        <li><a href="https://x.com" target="_blank">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ActiveShoes Argentina - Todos los derechos reservados</p>
+            </div>
+        </div>
+      </footer>
+
+</body>
+</html>

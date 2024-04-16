@@ -9,19 +9,16 @@
 </head>
 <body>
 
-<div class="navbar">
-  <a href="#home">Inicio</a>
-  <a href="#news">Noticias</a>
-  <a href="#contact">Contacto</a>
-  <a href="registrarse.html">Registrarse</a>
-  <div class="search-container">
-    <form action="/search">
-      <input type="text" placeholder="Buscar..." name="search">
-      <button type="submit">Buscar</button>
-      
-    </form>
-  </div>
-</div>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="#">Contacto</a></li>
+        <li><a href="registrarse.html">Usuario</a></li>
+      </ul>
+    </nav>
+  </header>
 
 <div class="banner">
     
@@ -32,9 +29,9 @@
       <h2>Marcas Destacadas</h2>
       <div class="logo-gallery">
         <!-- Reemplaza con las rutas de imagen reales -->
-        <img src="static/img/Adidas-Logo.jpeg" alt="Marca 1">
-        <img src="static/img/Logo_nike_principal.jpg" alt="Marca 2">
-        <img src="static/img/logo-puma.png" alt="Marca 3">
+        <img src="static/img/adidas-logo.png" alt="Marca 1">
+        <img src="static/img/nike-logo.png" alt="Marca 2">
+        <img src="static/img/puma-logo.png" alt="Marca 3">
         <img src="static/img/logo-fila.svg" alt="Marca 4">
         <img src="static/img/topper-logo.png" alt="Marca 5">
 
@@ -43,70 +40,6 @@
     </div>
   </section>
 
-  <!-- Sección de productos -->
-  <section>
-      <div class="product-list" id="productList">
-        <!-- Los productos se insertarán aquí -->
-        
-      </div>
-      
-      <!-- Paginación -->
-      <div class="pagination" id="pagination">
-        <!-- Los enlaces de paginación se insertarán aquí -->
-      </div>
-</section>
-
-  <script>
-  // Datos de ejemplo para los productos
-  const products = [
-    { id: 1, name: 'Producto 1', price: '$19.99' },
-    { id: 2, name: 'Producto 2', price: '$89.99' },
-    { id: 3, name: 'Producto 3', price: '$17.99' },
-    { id: 4, name: 'Producto 4', price: '$19.99' },
-    { id: 5, name: 'Producto 5', price: '$59.99' },
-    { id: 6, name: 'Producto 6', price: '$69.99' },
-
-   
-
-    // ... Añade más productos según sea necesario
-  ];
-  
-  // Función para mostrar los productos
-  function showProducts(page) {
-    const itemsPerPage = 3;
-    const startIndex = (page - 1) * itemsPerPage;
-    const endIndex = startIndex + itemsPerPage;
-    const productsToShow = products.slice(startIndex, endIndex);
-  
-    const productList = document.getElementById('productList');
-    productList.innerHTML = ''; // Limpiar la lista de productos anterior
-    productsToShow.forEach(product => {
-      productList.innerHTML += `<div class="product">
-        <h3>${product.name}</h3>
-        <p>Precio: ${product.price}</p>
-      </div>`;
-    });
-  }
-  
-  // Función para actualizar la paginación
-  function updatePagination(currentPage, totalPages) {
-    const pagination = document.getElementById('pagination');
-    pagination.innerHTML = ''; // Limpiar la paginación anterior
-    for (let i = 1; i <= totalPages; i++) {
-      pagination.innerHTML += `<a href="#" class="${i === currentPage ? 'active' : ''}" onclick="navigateToPage(${i})">${i}</a>`;
-    }
-  }
-  
-  // Función para navegar a una página
-  function navigateToPage(page) {
-    const totalPages = Math.ceil(products.length / 4);
-    showProducts(page);
-    updatePagination(page, totalPages);
-  }
-  
-  // Inicializar la lista de productos y la paginación
-  navigateToPage(1);
-  </script>
 
 <footer>
   <div class="container">
@@ -116,7 +49,7 @@
               <ul>
                   <li><a href="#">Sobre nosotros</a></li>
                   <li><a href="#">Contacto</a></li>
-                  <li><a href="#">Sucursales/a></li>
+                  <li><a href="#">Sucursales</a></li>
               </ul>
           </div>
           <div class="footer-column">
@@ -130,9 +63,9 @@
           <div class="footer-column">
               <h4>Síguenos</h4>
               <ul>
-                  <li><a href="#">Facebook</a></li>
-                  <li><a href="#">Instagram</a></li>
-                  <li><a href="#">Twitter</a></li>
+                  <li><a href="https://web.facebook.com" target="_blank">Facebook</a></li>
+                  <li><a href="https:/Instagram.com" target="_blank">Instagram</a></li>
+                  <li><a href="https://x.com" target="_blank">Twitter</a></li>
               </ul>
           </div>
       </div>
@@ -146,7 +79,3 @@
 
 </body>
 </html>
-
-
-  
-  

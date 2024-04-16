@@ -3,15 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static/css/styleForm.css">
+    <link rel="stylesheet" href="static/css/style.css">
     <title>Document</title>
 </head>
 
 
 <body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#">Productos</a></li>
+        <li><a href="#">Contacto</a></li>
+        <li><a href="registrarse.html">Usuario</a></li>
+      </ul>
+    </nav>
+  </header>
+
     <main>
         <form id="formularioRegistro">
-            <h2>Registro</h2>
+            <h2 id="tituloRegistro">Registro</h2>
             <div class="input-container">
               <label for="nombre">Nombre:</label>
               <input type="text" id="nombre" name="nombre" required>
@@ -37,9 +49,44 @@
               <input type="password" id="password" name="password" required>
             </div>
           
-            <button type="submit">Registrar</button>
+            <button id="botonFormulario" type="submit">Registrar</button>
           </form>
     </main>
+
+    <footer>
+      <div class="container">
+          <div class="footer-columns">
+              <div class="footer-column">
+                  <h4>Nuestra Empresa</h4>
+                  <ul>
+                      <li><a href="#">Sobre nosotros</a></li>
+                      <li><a href="#">Contacto</a></li>
+                      <li><a href="#">Sucursales</a></li>
+                  </ul>
+              </div>
+              <div class="footer-column">
+                  <h4>Soporte</h4>
+                  <ul>
+                      <li><a href="#">Preguntas frecuentes</a></li>
+                      <li><a href="#">Envíos y devoluciones</a></li>
+                      <li><a href="#">Términos de servicio</a></li>
+                  </ul>
+              </div>
+              <div class="footer-column">
+                  <h4>Síguenos</h4>
+                  <ul>
+                      <li><a href="https://web.facebook.com" target="_blank">Facebook</a></li>
+                      <li><a href="https:/Instagram.com" target="_blank">Instagram</a></li>
+                      <li><a href="https://x.com" target="_blank">Twitter</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="footer-bottom">
+              <p>&copy; 2024 ActiveShoes Argentina - Todos los derechos reservados</p>
+          </div>
+      </div>
+    </footer>
+
 </body>
 
 </html>

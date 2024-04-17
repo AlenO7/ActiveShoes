@@ -298,3 +298,20 @@ grid-template-columns: auto auto;
         margin-bottom: 20px;
     }
 }
+h2, h3 {
+  font-family: 'Arial', sans-serif; /* Fuente moderna y limpia */
+  color: #333; /* Color oscuro para mejor legibilidad */
+  text-transform: uppercase; /* Todas las letras en mayúsculas para un aspecto más moderno */
+  letter-spacing: 1.5px; /* Espaciado entre letras para un toque elegante */
+  margin-bottom: 20px; /* Espacio debajo del título para separarlo del texto */
+  border-bottom: 2px solid #858484; /* Una línea debajo del título para un toque distintivo */
+  display: inline-block; /* Hace que la línea de borde se ajuste al texto */
+  padding-bottom: 5px; /* Espacio entre el texto y la línea de borde */
+}
+
+/* Media query para responsividad en dispositivos móviles */
+@media (max-width: 768px) {
+  h4 {
+      font-size: 1.2em; /* Tamaño de fuente más pequeño para pantallas más pequeñas */
+  }
+}

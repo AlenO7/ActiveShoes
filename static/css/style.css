@@ -316,3 +316,10 @@ h2, h3 {
   }
 }
 
+/* Estilo para los checkboxes */
+.checkbox-container {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+}
+

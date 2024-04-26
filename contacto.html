@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://kit.fontawesome.com/c87066f139.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="static/css/style.css">
+<title>ActiveShoes Atgentina</title>
+
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+          <ul>
+            <li><a class="active" href="index.html"><i class="fa fa-fw fa-home"></i> ACTIVESHOES</a></li>    
+            <li> <a href="productos.html"><i class="fa fa-fw fa-envelope"></i> Productos</a></li>
+            <li> <a href="contacto.html"><i class="fa fa-fw fa-envelope"></i> Contacto</a></li>
+            <li style="float: right;"><a href="registrarse.html"><i class="fa fa-fw fa-user"></i> Ingresá o Registrate</a></li>
+          </ul>
+        </nav>
+      </header>
+
+ 
+      <main>
+        <form id="formularioRegistro">
+            <h2 id="tituloRegistro">Contacto</h2><br><br>
+            <h3 class="subtitulo">Deja tu consulta y nos comunicaremos dentro de las 48 horas.</h3><br>
+            <div class="input-container">
+              <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+            </div>
+            <div class="input-container">
+                <input type="text" id="email" name="email" placeholder="Email">
+            </div>
+            <div class="input-container">
+                <input type="text" id="tel" name="tel" placeholder="Teléfono">
+            </div>
+            <div class="input-container">
+                <input type="text" id="Npedido" name="Npedido" placeholder="Número de Pedido">
+            </div>
+            <div class="input-container">
+                <select id="opciones" name="opciones">
+                    <option value="opcion1">Quiero conocer el estado de mi pedido</option>
+                    <option value="opcion2">Quiero realizar un cambio</option>
+                    <option value="opcion3">El producto presenta fallas</option>
+                    <option value="opcion4">Problemas de facturación</option>
+                    <option value="opcion5">Otras consultas</option>
+                  </select><br>
+            </div>
+            <div class="input-container">
+                <label for="mensaje">Breve descripción:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" cols="50"></textarea><br>
+            </div>
+            <button id="botonFormulario" type="submit">Enviar</button>
+          </form>
+    </main>
+
+<footer>
+  <div class="container">
+      <div class="footer-columns">
+          <div class="footer-column">
+              <h4>Nuestra Empresa</h4>
+              <ul>
+                  <li><a href="#">Sobre nosotros</a></li>
+                  <li><a href="#">Contacto</a></li>
+                  <li><a href="#">Sucursales</a></li>
+              </ul>
+          </div>
+          <div class="footer-column">
+              <h4>Soporte</h4>
+              <ul>
+                  <li><a href="#">Preguntas frecuentes</a></li>
+                  <li><a href="#">Envíos y devoluciones</a></li>
+                  <li><a href="#">Términos de servicio</a></li>
+              </ul>
+          </div>
+          <div class="footer-column">
+              <h4>Síguenos</h4>
+              <ul>
+                  <li><a href="https://web.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+                  <li><a href="https://Instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                  <li><a href="https://x.com" target="_blank"><i class="fa-brands fa-x-twitter"></i> Twitter</a></li>
+              </ul>
+          </div>
+      </div>
+      <div class="footer-bottom">
+          <p>&copy; 2024 ActiveShoes Argentina - Todos los derechos reservados</p>
+      </div>
+  </div>
+</footer>
+  
+
+
+</body>
+</html>

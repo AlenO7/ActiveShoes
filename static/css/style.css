@@ -36,10 +36,7 @@
   background-color: #000;
 }
 
-/* Estilo para el enlace activo */
-.active {
-  background-color: #555;
-}
+
 /*Llevo el Login a la derecha*/
 .navbar li.right {
   float: right;

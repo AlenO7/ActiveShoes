@@ -33,16 +33,16 @@
               <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
             </div>
             <div class="input-container">
-                <input type="text" id="email" name="email" placeholder="Email">
+                <input type="text" id="email" name="email" placeholder="Email" required>
             </div>
             <div class="input-container">
-                <input type="text" id="tel" name="tel" placeholder="Teléfono">
+                <input type="text" id="tel" name="tel" placeholder="Teléfono" required>
             </div>
             <div class="input-container">
-                <input type="text" id="Npedido" name="Npedido" placeholder="Número de Pedido">
+                <input type="text" id="Npedido" name="Npedido" placeholder="Número de Pedido" required>
             </div>
             <div class="input-container">
-                <select id="opciones" name="opciones">
+                <select id="opciones" name="opciones" required>
                     <option value="opcion1">Quiero conocer el estado de mi pedido</option>
                     <option value="opcion2">Quiero realizar un cambio</option>
                     <option value="opcion3">El producto presenta fallas</option>
@@ -52,10 +52,10 @@
             </div>
             <div class="checkbox-container">
                 <label for="opciones">¿Como preferis que te contactemos?</label>
-                <label for="email"> Email</label>
-                <input type="checkbox" id="email" name="email" value="email">
-                <label for="tel"> Teléfono </label>
-                <input type="checkbox" id="tel" name="tel" value="tel">
+                <label for="emailCheck"> Email</label>
+                <input type="checkbox" id="emailCheck" name="email" value="email">
+                <label for="telCheck"> Teléfono </label>
+                <input type="checkbox" id="telCheck" name="tel" value="tel">
             </div><br>
             <div class="input-container">
                 <label for="mensaje">Breve descripción:</label>
@@ -101,6 +101,6 @@
 </footer>
   
 
-
+<script src="js/script.js"></script>
 </body>
 </html>

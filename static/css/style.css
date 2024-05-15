@@ -97,6 +97,29 @@
     color: white;
   }
 
+  /*estilos grid*/
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-gap: 1%; 
+    margin: 1% 2% 2% 2%;
+  }
+  
+  
+  .lotto, .training, .under, .promo, .cuotas {
+    width: 100%; 
+   
+  }
+
+  .cuotas {
+    grid-column: span 3; 
+  }
+  
+  .under {
+    grid-column: span 3;
+    grid-row: 4; 
+  }
+   
   /*estilos logos*/
    .brand-logos { 
     margin-top: 100px;

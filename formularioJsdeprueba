@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Form</title>
+</head>
+<body>
+	<form id="contactForm">
+		<label for="name">Nombre:</label><br>
+		<input type="text" id="name" name="name" required><br>
+		<label for="email">Email:</label><br>
+		<input type="email" id="email" name="email" required><br>
+		<label for="message">Mensaje:</label><br>
+		<textarea id="message" name="message" required></textarea><br>
+		<label for="newsletter">Suscribete a nuestro newsletter:</label><br>
+		<input type="checkbox" id="newsletter" name="newsletter"><br>
+		<label for="category">Elige una categoria:</label><br>
+		<select id="category" name="category">
+			<option value="general">General</option>
+			<option value="sales">Ventas</option>
+			<option value="support">Soporte</option>
+		</select><br>
+		<input type="submit" value="Submit">
+	</form>
+	<img src="image.jpg" alt="Image">
+	<script>
+		const form = document.getElementById("contactForm");
+		form.addEventListener("submit", function(event) {
+			event.preventDefault();
+			const name = document.getElementById("name");
+			const email = document.getElementById("email");
+			const message = document.getElementById("message");
+			const newsletter = document.getElementById("newsletter");
+			const category = document.getElementById("category");
+			if (name.value === "" || email.value === "" || message.value === "") {
+				alert("Por favor, marque la casilla de verificación del Newsletter.");
+				return;
+			}
+			if (!newsletter.checked) {
+				alert("Por favor, marque la casilla de verificación del Newsletter.");
+				return;
+			}
+			alert("Formulario enviado Exitosamente!");
+		});
+	</script>
+</body>
+</html>

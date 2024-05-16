@@ -32,47 +32,55 @@
 
               <h3 class="subtitulo">Datos Personales</h3><br>
 
+             <div class="formulario__grupo formulario__grupo-incorrecto"> <!--sacar la clase formulario__grupo-correctode ejemplo -->
               <div class="input-container">
                 <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
                 <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
                 <p class="form_input-error">El Nombre solo puede contener letras.</p>
               </div>
+            </div>
               
-              <div class="input-container">
-                  <input type="text" id="Apellido" name="Apellido" placeholder="Apellido">
-                  <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
-                  <p class="form_input-error">El Apellido solo puede contener letras.</p>
-              </div>
+            <div class="formulario__grupo">
+                <div class="input-container">
+                    <input type="text" id="Apellido" name="Apellido" placeholder="Apellido">
+                    <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                    <p class="form_input-error">El Apellido solo puede contener letras.</p>
+                </div>
+            </div>
+
              
 
-
-                <div class="input-container">
-                  <input type="text" id="dni" name="dni" placeholder="DNI">
-                  <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
-                  <p class="form_input-error">El DNI debe tener entre 8 y 10 digitos alfanumericos.</p>
-                </div> 
-               
-
+              <div class="formulario__grupo">
+                  <div class="input-container">
+                    <input type="text" id="dni" name="dni" placeholder="DNI">
+                    <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                    <p class="form_input-error">El DNI debe tener entre 8 y 10 digitos alfanumericos.</p>
+                  </div> 
+              </div> 
               <h3>Sobre tu cuenta</h3><br>
-              <div class="input-container">
-                <input type="email" id="email" name="email" placeholder="correo@correo.com">
-                <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
-                <p class="form_input-error">El Email no es valido.</p>
+              <div class="formulario__grupo">
+                <div class="input-container">
+                  <input type="email" id="email" name="email" placeholder="correo@correo.com">
+                  <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                  <p class="form_input-error">El Email no es valido.</p>
+              </div>
+            </div>
+              
+              <div class="formulario__grupo">
+                <div class="input-container">
+                  <input type="password" id="password" name="password" placeholder="Contraseña">
+                  <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                  <p class="form_input-error">La contraseña debe ser de 4 a 15 dígitos.</p>
+                </div>
               </div>
               
-              
-              <div class="input-container">
-                <input type="password" id="password" name="password" placeholder="Contraseña">
-                <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
-                <p class="form_input-error">La contraseña debe ser de 4 a 15 dígitos.</p>
-              </div>
-              
-
-              <div class="input-container">
-                <input type="password" id="passwordConfirm" name="passwordConfirm" placeholder="Confirmar Contraseña">
-                <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
-                <p class="form_input-error">Las contraseñas no coinciden.</p>
-              </div>
+              <div class="formulario__grupo">
+                <div class="input-container">
+                    <input type="password" id="passwordConfirm" name="passwordConfirm" placeholder="Confirmar Contraseña">
+                    <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                    <p class="form_input-error">Las contraseñas no coinciden.</p>
+                </div>
+            </div>
               
               <div class="formulario__mensaje" id="formulario__mensaje">
                 <p><i class="fa-solid fa-triangle-exclamation"></i><b>Error: Revisa los campos del formulario.</b></p>

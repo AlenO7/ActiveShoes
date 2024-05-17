@@ -413,3 +413,128 @@ a.boton-estilo {
   transition: background-color 0.3s ease;
   
 }
+#ensu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3%;
+  height: 80px;
+}
+
+#tisu{
+  font-family: Arial, sans-serif;
+  font-size: 40px;color: white;
+
+}
+
+#store-list{
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.subenc{
+  margin-top: 15px;
+  font-size: 20px;
+  border-bottom: 2px solid #858484;
+  text-align: center;
+}
+
+.map-btn {
+  width: 30%;
+  padding: 10px;
+  border: none;
+  background-color: #000000;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.title{
+  margin-top: 20px;
+  padding: 2%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+p{
+  margin-bottom: 10px;
+  font-size: 20px;
+  padding: 2%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#containersobre{
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  display: flex;
+}
+
+#titsob{
+  justify-content: center;
+  padding: 3%;
+  height: 80px;
+  font-family: Arial, sans-serif;
+  font-size: 40px;
+  color: white;
+  background-color: #333;
+  
+}
+
+p{
+  margin-bottom: 10px;
+  font-size: 20px;
+  padding: 2%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.piepag{
+  text-align: center;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#fundadores{
+  height: 250px;
+  width: 500px;
+}
+
+.bio li{
+  margin-bottom: 10px;
+  font-size: 20px;
+  padding: 1%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h2{
+  margin-top: 20px;
+}
+
+main{
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+}
+
+#titpre{
+  justify-content: center;
+  padding: 3%;
+  height: 80px;
+  font-family: Arial, sans-serif;
+  font-size: 40px;
+  color: white;
+  background-color: #333;
+}
+
+.dlp {
+  margin-bottom: 10px;
+  font-size: 20px;
+  padding: 2%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#piepre{
+  text-align: center;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+}

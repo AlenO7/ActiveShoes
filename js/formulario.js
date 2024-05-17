@@ -1,5 +1,5 @@
  const formulario = document.getElementById('formularioRegistro');
-const inputs = document.querySelectorAll('#formularioResgistro input');
+const inputs = document.querySelectorAll('#formularioRegistro input');
 
 const expresiones = {
 	
@@ -11,6 +11,17 @@ const expresiones = {
 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
 	
 }
+
+inputs.forEach((input) => {
+	input.addEventListener('keyup', () => {
+		console.log ('Tecla levantada');
+
+	});
+});
+
+formulario.addEventListener ('submit' , () =>{
+	expresiones.preventDefault(); 
+} );
 
 // const campos = {
 // 	nombre: false,

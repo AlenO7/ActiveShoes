@@ -121,21 +121,21 @@
   }
    
   /*estilos logos*/
-   .brand-logos { 
+  .brand-logos { 
     margin-top: 100px;
     margin-bottom: 100px;
     padding: 10px 0; 
     background-color: #ffffff; 
     text-align: center; }
 
-    .brand-logos h2 { margin-bottom: 15px; }
+  .brand-logos h2 { margin-bottom: 15px; }
     
-    .logo-gallery img {
+  .logo-gallery img {
         margin: 0px 20px;
         vertical-align: middle;
         max-height: 100px;
         /*border-radius: 100%;  Esto hará que los logos sean completamente redondos */
-      }
+    }
 
    
 /* estilo seccion formulario */

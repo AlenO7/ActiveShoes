@@ -6,87 +6,94 @@ const expresiones = {
 	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
 	apellido: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
 	dni: /^\d{8,10}$/, // 8 a 10 numeros.
-	usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
-	password: /^.{4,12}$/, // 4 a 12 digitos.
-	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
+	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/, // Letras, numeros, guion y guion_bajo
+	password: /^.{4,15}$/, // 4 a 12 digitos.
+	passwordConfirm:  /^.{4,15}$/
 	
 }
 
-inputs.forEach((input) => {
-	input.addEventListener('keyup', () => {
-		console.log ('Tecla levantada');
+const validarFormulario = (e) => {
+	switch (e.target.name) {
+				case "nombre":
+					validarCampo(expresiones.nombre, e.target, 'nombre'); // Llamo a la funcion validarCampo con 3 parametros (expresion, input y campo).
+				break;
+				case "apellido":
+					validarCampo(expresiones.apellido, e.target, 'apellido');
+				break;
+				case "dni":
+					validarCampo(expresiones.dni, e.target, 'dni');
+				break;
+				case "email":
+					validarCampo(expresiones.email, e.target, 'email');
+					
+				break;
+				case "password":
+					validarCampo(expresiones.password, e.target, 'password');
+				break;
+				case "passwordConfirm":
+					validarPasswordConfirm();
+				break;
+		    case "Npedido":
+			}
 
-	});
+}
+// Creo la funcion para validar cada campo.
+const validarCampo = (expresion,input, campo) => {
+
+	if(expresion.test(input.value)){
+		document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-incorrecto');
+		document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-correcto');
+		document.querySelector(`#grupo__${campo} i`).classList.add('fa-circle-check');
+		document.querySelector(`#grupo__${campo} i`).classList.remove('fa-circle-xmark');
+		document.querySelector(`#grupo__${campo} .form_input-error` ).classList.remove('form_input-error-activo');
+	} else {
+		document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-incorrecto');
+		document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-correcto');
+		document.querySelector(`#grupo__${campo} i`).classList.add('fa-circle-xmark');
+		document.querySelector(`#grupo__${campo} i`).classList.remove('fa-circle-check');
+		document.querySelector(`#grupo__${campo} .form_input-error` ).classList.add('form_input-error-activo');
+
+	}
+}
+
+inputs.forEach((input) => {
+	input.addEventListener('keyup', validarFormulario ); // valida al soltar la tecla
+	input.addEventListener('blur', validarFormulario ); // valida al presionar fuera del input
+
 });
 
 formulario.addEventListener ('submit' , () =>{
 	expresiones.preventDefault(); 
 } );
 
-// const campos = {
-// 	nombre: false,
-//   email: false,
-// 	telefono: false,
-// 	numerodepedido: false,
-// }
 
-// const validarFormulario = (e) => {
-// 	switch (e.target.name) {
-// 		case "nombre":
-// 			validarCampo(expresiones.nombre, e.target, 'nombre');
-// 		break;
-// 		case "email":
-// 			validarCampo(expresiones.password, e.target, 'password');
-// 			validarPassword2();
-// 		break;
-// 		case "correo":
-// 			validarCampo(expresiones.correo, e.target, 'correo');
-// 		break;
-// 		case "telefono":
-// 			validarCampo(expresiones.telefono, e.target, 'telefono');
-// 		break;
-//     case "Npedido":
-// 	}
-// }
 
-// const validarCampo = (expresion, input, campo) => {
-// 	if(expresion.test(input.value)){
-// 		document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-incorrecto');
-// 		document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-correcto');
-// 		document.querySelector(`#grupo__${campo} i`).classList.add('fa-check-circle');
-// 		document.querySelector(`#grupo__${campo} i`).classList.remove('fa-times-circle');
-// 		document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.remove('formulario__input-error-activo');
-// 		campos[campo] = true;
-// 	} else {
-// 		document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-incorrecto');
-// 		document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-correcto');
-// 		document.querySelector(`#grupo__${campo} i`).classList.add('fa-times-circle');
-// 		document.querySelector(`#grupo__${campo} i`).classList.remove('fa-check-circle');
-// 		document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.add('formulario__input-error-activo');
-// 		campos[campo] = false;
-// 	}
-// }
 
-// const validarPassword2 = () => {
-// 	const inputPassword1 = document.getElementById('password');
-// 	const inputPassword2 = document.getElementById('password2');
 
-// 	if(inputPassword1.value !== inputPassword2.value){
-// 		document.getElementById(`grupo__password2`).classList.add('formulario__grupo-incorrecto');
-// 		document.getElementById(`grupo__password2`).classList.remove('formulario__grupo-correcto');
-// 		document.querySelector(`#grupo__password2 i`).classList.add('fa-times-circle');
-// 		document.querySelector(`#grupo__password2 i`).classList.remove('fa-check-circle');
-// 		document.querySelector(`#grupo__password2 .formulario__input-error`).classList.add('formulario__input-error-activo');
-// 		campos['password'] = false;
-// 	} else {
-// 		document.getElementById(`grupo__password2`).classList.remove('formulario__grupo-incorrecto');
-// 		document.getElementById(`grupo__password2`).classList.add('formulario__grupo-correcto');
-// 		document.querySelector(`#grupo__password2 i`).classList.remove('fa-times-circle');
-// 		document.querySelector(`#grupo__password2 i`).classList.add('fa-check-circle');
-// 		document.querySelector(`#grupo__password2 .formulario__input-error`).classList.remove('formulario__input-error-activo');
-// 		campos['password'] = true;
-// 	}
-// }
+ const validarPasswordConfirm = () => {
+	 
+	const inputPassword = documentElementById('password');
+	const inputPasswordConfirm = documentElementById('passwordConfirm');
+
+	if(inputPassword.value !== inputPasswordConfirm.value){
+
+		document.getElementById(`grupo__passwordConfirm`).classList.add('formulario__grupo-incorrecto');
+		document.getElementById(`grupo__passwordConfirm`).classList.remove('formulario__grupo-correcto');
+		document.querySelector(`#grupo__passwordConfirm i`).classList.add('fa-circle-xmark');
+		document.querySelector(`#grupo__passwordConfirm i`).classList.remove('fa-circle-check');
+		document.querySelector(`#grupo__passwordConfirm .form_input-error` ).classList.add('form_input-error-activo');
+
+	} else {
+		document.getElementById(`grupo__passwordConfirm`).classList.remove('formulario__grupo-incorrecto');
+		document.getElementById(`grupo__passwordConfirm`).classList.add('formulario__grupo-correcto');
+		document.querySelector(`#grupo__passwordConfirm i`).classList.add('fa-circle-check');
+		document.querySelector(`#grupo__passwordConfirm i`).classList.remove('fa-circle-xmark');
+		document.querySelector(`#grupo__passwordConfirm .form_input-error` ).classList.remove('form_input-error-activo');
+
+	}
+ }
+
+
 
 // inputs.forEach((input) => {
 // 	input.addEventListener('keyup', validarFormulario);

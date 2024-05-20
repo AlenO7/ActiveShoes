@@ -78,14 +78,14 @@ const validarCampo = (expresion,input, campo) => {
 		document.getElementById(`grupo__password2`).classList.remove('formulario__grupo-correcto');
 		document.querySelector(`#grupo__password2 i`).classList.add('fa-circle-xmark');
 		document.querySelector(`#grupo__password2 i`).classList.remove('fa-circle-check');
-		document.querySelector(`#grupo__password2 .formulario__input-error`).classList.add('formulario__input-error-activo');
+		document.querySelector(`#grupo__password2 .form_input-error`).classList.add('form_input-error-activo');
 		campos['password'] = false;
 	} else {
 		document.getElementById(`grupo__password2`).classList.remove('formulario__grupo-incorrecto');
 		document.getElementById(`grupo__password2`).classList.add('formulario__grupo-correcto');
 		document.querySelector(`#grupo__password2 i`).classList.remove('fa-circle-xmark');
 		document.querySelector(`#grupo__password2 i`).classList.add('fa-circle-check');
-		document.querySelector(`#grupo__password2 .formulario__input-error`).classList.remove('formulario__input-error-activo');
+		document.querySelector(`#grupo__password2 .form_input-error`).classList.remove('form_input-error-activo');
 		campos['password'] = true;
 	}
 }

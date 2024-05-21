@@ -144,7 +144,7 @@
   align-items: center;
   height: 120vh;
 }
-
+ /*DESDE ACA*/
 form {
   background-color: #fff;
   padding: 40px;
@@ -269,6 +269,7 @@ form {
 
 }
 
+/*hasta aca modifique cosas*/
 
 /*estilo de la barra de filtros*/
 #productos-container{

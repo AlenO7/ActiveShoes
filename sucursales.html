@@ -8,9 +8,20 @@
   <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>
-  <header id="ensu">
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li> <a class="animate__animated animate__flash" href="index.html"><i class="fa fa-fw fa-home"></i> ActiveShoes</a></li>    
+        <li> <a href="productos.html"><i class="fa-solid fa-shirt"></i> Productos</a></li>
+        <li> <a href="contacto.html"><i class="fa fa-fw fa-envelope"></i> Contacto</a></li>
+        <li style="float: right;"><a href="registrarse.html"><i class="fa-regular fa-registered"></i> Registro </a></li>
+        <li style="float: right;"><a href="ingreso.html"><i class="fa fa-fw fa-user"></i>Ingreso</a></li>
+      </ul>
+    </nav>
+  </header>  
+  <div id="ensu">
     <h1 id="tisu">Tiendas ActiveShoes en Buenos Aires</h1>
-  </header>
+  </div>
   <main>
     <section id="store-list">
       <h2 class="subenc">Sucursales</h2>
@@ -18,24 +29,56 @@
         <li>
           <h3 class="title">Tienda ActiveShoes Recoleta mall</h3>
           <p>Dirección: Vicente lopez 2050, Buenos Aires</p>
-          <button class="map-btn">Ver en mapa</button>
-        </li>
+          <a href="https://maps.app.goo.gl/zUuMz7xi7YWizV3e8" class="map-btn">Ver en mapa</a>
         <li>
           <h3 class="title">Tienda ActiveShoes Abasto</h3>
           <p>Dirección: Av corrientes 3247, Buenos Aires</p>
-          <button class="map-btn">Ver en mapa</button>
+         <a href="https://maps.app.goo.gl/WQueAdfwE4pAqVyWA" class="map-btn">Ver en mapa</a> 
         </li>
         <li>
           <h3 class="title">Tienda ActiveShoes Alto Palermo</h3>
           <p>Dirección: Av. Santa Fe 3253, Buenos Aires</p>
-          <button class="map-btn">Ver en mapa</button>
+          <a href="https://maps.app.goo.gl/9hJjyumszixYsKVd9" class="map-btn">Ver en mapa</a>
         </li>
       </ul>
     </section>
     <section class="map-container">
-      <iframe src="https://www.google.com/maps/embed?..." frameborder="0" width="100%" height="400"></iframe>
+      <iframe src="https://www.google.com/maps/embed?..." frameborder="0" width="40%" height="300"></iframe>
     </section>
   </main>
   <script src="script.js"></script>
+  <footer>
+    <div class="container">
+        <div class="footer-columns">
+            <div class="footer-column">
+                <h4>Nuestra Empresa</h4>
+                <ul>
+                  <li><a href="sobrenosotros.html">Sobre nosotros</a></li>
+                  <li><a href="contacto.html">Contacto</a></li>
+                  <li><a href="sucursales.html">Sucursales</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Soporte</h4>
+                <ul>
+                  <li><a href="preguntas.html">Preguntas frecuentes</a></li>
+                  <li><a href="index.html">Envíos y devoluciones</a></li>
+                  <li><a href="index.html">Términos de servicio</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Síguenos</h4>
+                <ul>
+                    <li><a href="https://web.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+                    <li><a href="https://Instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                    <li><a href="https://x.com" target="_blank"><i class="fa-brands fa-x-twitter"></i> Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 ActiveShoes Argentina - Todos los derechos reservados</p>
+        </div>
+    </div>
+  </footer>
 </body>
 </html>

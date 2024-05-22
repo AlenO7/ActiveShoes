@@ -421,22 +421,25 @@ a.boton-estilo {
   text-align: center;
   text-decoration: none;
   color: #ffffff;
-  background-color: #000000;
-  border-radius: 5px;
+  background-color: #555;
   transition: background-color 0.3s ease;
   
 }
 #ensu {
-  display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 3%;
-  height: 80px;
+  padding: 1%;
+  height: 50px;
+  font-family: Arial, sans-serif;
+  font-size: 40px;
+  color: white;
+  background-color: #555;
+  margin-top: 50px;
 }
 
 #tisu{
   font-family: Arial, sans-serif;
   font-size: 40px;color: white;
+  text-align: center;
 
 }
 
@@ -456,10 +459,12 @@ a.boton-estilo {
   width: 30%;
   padding: 10px;
   border: none;
-  background-color: #000000;
+  background-color: #555;
   color: white;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
 }
 
 .title{
@@ -485,13 +490,13 @@ p{
 
 #titsob{
   justify-content: center;
-  padding: 3%;
-  height: 80px;
+  padding: 1%;
+  height: 50px;
   font-family: Arial, sans-serif;
   font-size: 40px;
   color: white;
-  background-color: #333;
-  
+  background-color: #555;
+  margin-top: 50px;
 }
 
 p{
@@ -501,11 +506,6 @@ p{
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.piepag{
-  text-align: center;
-  font-size: 25px;
-  font-family: Arial, Helvetica, sans-serif;
-}
 
 #fundadores{
   height: 250px;
@@ -531,23 +531,19 @@ main{
 
 #titpre{
   justify-content: center;
-  padding: 3%;
-  height: 80px;
+  padding: 1%;
+  height: 50px;
   font-family: Arial, sans-serif;
   font-size: 40px;
   color: white;
-  background-color: #333;
+  background-color: #555;
+  margin-top: 50px;
+
 }
 
 .dlp {
   margin-bottom: 10px;
   font-size: 20px;
   padding: 2%;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-#piepre{
-  text-align: center;
-  font-size: 25px;
   font-family: Arial, Helvetica, sans-serif;
 }

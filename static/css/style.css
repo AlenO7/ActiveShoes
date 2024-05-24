@@ -900,3 +900,167 @@ height: 300px;
   }
 
 }
+
+    .footer-column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+h2, h3 {
+  font-family: 'Arial', sans-serif; /* Fuente moderna y limpia */
+  color: #333; /* Color oscuro para mejor legibilidad */
+  text-transform: uppercase; /* Todas las letras en mayúsculas*/
+  letter-spacing: 1.5px; /* Espaciado entre letras  */
+  margin-bottom: 20px; /* Espacio debajo del título para separarlo del texto */
+  border-bottom: 2px solid #858484; /* Una línea debajo del título  */
+  display: inline-block; /* Hace que la línea de borde se ajuste al texto */
+  padding-bottom: 5px; /* Espacio entre el texto y la línea de borde */
+}
+
+/* Media query para responsividad en dispositivos móviles */
+@media (max-width: 768px) {
+  h4 {
+      font-size: 1.2em; /* Tamaño de fuente más pequeño para pantallas más pequeñas */
+  }
+}
+
+/* Estilo para los checkboxes */
+.checkbox-container {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+}
+a.boton-estilo {
+  display: inline-block;
+  width: 75%;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #555;
+  transition: background-color 0.3s ease;
+  
+}
+#ensu {
+  justify-content: center;
+  padding: 1%;
+  height: 50px;
+  font-family: Arial, sans-serif;
+  font-size: 40px;
+  color: white;
+  background-color: #555;
+  margin-top: 50px;
+}
+
+#tisu{
+  font-family: Arial, sans-serif;
+  font-size: 40px;color: white;
+  text-align: center;
+
+}
+
+#store-list{
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.subenc{
+  margin-top: 15px;
+  font-size: 20px;
+  border-bottom: 2px solid #858484;
+  text-align: center;
+}
+
+.map-btn {
+  width: 30%;
+  padding: 10px;
+  border: none;
+  background-color: #555;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.title{
+  margin-top: 20px;
+  padding: 2%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+p{
+  margin-bottom: 10px;
+  font-size: 20px;
+  padding: 2%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#containersobre{
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  display: flex;
+}
+
+#titsob{
+  justify-content: center;
+  padding: 1%;
+  height: 50px;
+  font-family: Arial, sans-serif;
+  font-size: 40px;
+  color: white;
+  background-color: #555;
+  margin-top: 50px;
+}
+
+p{
+  margin-bottom: 10px;
+  font-size: 20px;
+  padding: 2%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+#fundadores{
+  height: 250px;
+  width: 500px;
+}
+
+.bio li{
+  margin-bottom: 10px;
+  font-size: 20px;
+  padding: 1%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h2{
+  margin-top: 20px;
+}
+
+main{
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+}
+
+#titpre{
+  justify-content: center;
+  padding: 1%;
+  height: 50px;
+  font-family: Arial, sans-serif;
+  font-size: 40px;
+  color: white;
+  background-color: #555;
+  margin-top: 50px;
+
+}
+
+.dlp {
+  margin-bottom: 10px;
+  font-size: 20px;
+  padding: 2%;
+  font-family: Arial, Helvetica, sans-serif;
+}

@@ -1,55 +1,766 @@
-  *{
-    padding: 0px;
-    margin: 0px;
-  }
-  
-  
-  /* Estilos básicos */
-  body { font-family: Arial, sans-serif; }
+*{
+  padding: 0px;
+  margin: 0px;
+}
 
-  header{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 5vh;
-    background-color: #1D1D1D;
-  }
-  /* Estilo para la barra de navegación */
+body { font-family: Arial, sans-serif; }
+
+/* Estilos básicos */
+header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5vh;
+  background-color: #1D1D1D;
+}
+/* Estilo para la barra de navegación */
 .navbar {
-  width: 100%;
-  background-color: #555;
-  overflow: auto;
+width: 100%;
+overflow: auto;
 }
 
 /* Estilo para los enlaces de la barra de navegación */
 .navbar a {
-  float: left;
-  text-align: center;
-  padding: 12px;
-  color: white;
-  text-decoration: none;
-  font-size: 17px;
+float: left;
+text-align: center;
+padding: 12px;
+color: white;
+text-decoration: none;
+font-size: 17px;
 }
 
 /* Cambio de color al pasar el mouse sobre los enlaces */
 .navbar a:hover {
-  background-color: #000;
+background-color: #000;
+}
+
+/* Estilo para el div contenedor del buscar*/
+.buscar-container {
+  background-color: #797878;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15vh; /*altura*/
 }
 
 
-/*Llevo el Login a la derecha*/
-.navbar li.right {
-  float: right;
+
+h2, h3 {
+  font-family: 'Arial', sans-serif; /* Fuente moderna y limpia */
+  color: #333; /* Color oscuro para mejor legibilidad */
+  text-transform: uppercase; /* Todas las letras en mayúsculas*/
+  margin-bottom: 20px; /* Espacio debajo del título para separarlo del texto */
+  border-bottom: 2px solid #858484; /* Una línea debajo del título  */
+  display: inline-block; /* Hace que la línea de borde se ajuste al texto */
+  padding-bottom: 5px; /* Espacio entre el texto y la línea de borde */
+  }
+
+/*footer*/
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  font-family: 'Arial', sans-serif;
 }
 
-  /* Estilo para el div contenedor del buscar*/
-  .buscar-container {
-    background-color: #797878;
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-column {
+  width: 30%;
+}
+
+.footer-column h4 {
+  color: #f7c08a;
+  margin-bottom: 15px;
+}
+
+.footer-column ul,
+.footer-column ul li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.footer-column ul li a:hover {
+  color: #f7c08a;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #777;
+  padding-top: 20px;
+}
+
+.banner {
+  width: 100%;
+  height: 60vh;
+  background-image: url('../img/banner.jpg'); 
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  color: white;
+}
+
+#filtros{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 50px;
+  }
+
+  #filtro-barra{
+    width: 12vw;
+    height: 100vh;
+    margin-left: 20px;
+    }
+    
+    .filtro-categoria {
+    list-style: none;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 15px;
+    }
+
+    #subrayado{
+      text-decoration: underline;
+      cursor: pointer;
+      color: #fff;
+      }
+      
+    .tituloBarra{
+      font-size: 16px;
+      font-family: "Varela Round", sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .tituloMenuFiltros{
+      font-size: 16px;
+      font-family: "Varela Round", sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+      color: #fff;
+    }
+
+  /* estilo seccion formulario */
+.contenedor-formularios{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  form {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  align-content: center;
+  width: 50%;
+  
+  
+  }
+  
+  #tituloRegistro {
+  color: #333;
+  text-align: center;
+  
+  }
+  
+  .input-container {
+  margin-bottom: 15px;
+  
+  }
+  
+  .input-container label {
+  display: block;
+  margin-bottom: 5px;
+  
+  }
+  
+  .input-container input {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #botonFormulario {
+  width: 80%;
+  padding: 10px;
+  border: none;
+  background-color: #000000;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  }
+  
+  #botonFormulario:hover {
+  background-color: #4e4e4e;
+  }
+
+  .form_input-error{
+    font-size: 12px;
+    margin-bottom: 0px;
+    display: none;
+    }
+    .form_input-error-activo{
+    display: block;
+    
+    }
+    
+    .formulario__mensaje {
+      height: 45px;
+      line-height: 45px;
+      
+      padding: 0 15px;
+      border-radius: 3px;
+      display: none;
+      color: #ff0000; 
+      font-weight: bold; /* Hace que el texto sea en negrita para destacarlo */
+      text-align: center; /* Centra el texto en el mensaje */
+      transition: all 0.3s ease; /* Agrega una transición suave al mostrar y ocultar el mensaje */
+      grid-column: 1;
+    }
+    
+    .formulario__mensaje-activo {
+      display: block;
+      animation: fadein 0.5s; /* Agrega una animación de desvanecimiento al mostrar el mensaje */
+    }
+    
+    .form__mensaje-exito{
+    flex-direction: column;
+    align-items:flex-start;
+    font-size: 14px;
+    color: #119200;
+    display: none;
+    }
+    .form__mensaje-exito-activo{
+    display: block;
+    }
+    
+    /*ESTILOS PARA VALIDACIÓN*/
+    
+    .formulario__grupo-correcto .formulario__validacion-estado{
+    color: #1ed12d;
+    opacity: 1;
+    }
+    
+    .formulario__grupo-incorrecto .formulario__validacion-estado{
+    color: #bb2929;
+    opacity: 1;
+    }
+    .formulario__grupo-incorrecto .input-container input{
+    border: 3px solid #bb2929;
+    
+    }
+    
+    /* Estilo para los checkboxes */
+    .checkbox-container {
+      display: flex;
+      margin: 0 auto;
+      justify-content: space-around;
+    }
+    a.boton-estilo {
+      display: inline-block;
+      width: 75%;
+      padding: 10px 20px;
+      font-size: 16px;
+      text-align: center;
+      text-decoration: none;
+      color: #ffffff;
+      background-color: #000000;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      
+    }
+    #ensu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3%;
+      height: 80px;
+    }
+    
+    #tisu{
+      font-family: Arial, sans-serif;
+      font-size: 40px;color: white;
+    
+    }
+    
+    #store-list{
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .subenc{
+      margin-top: 15px;
+      font-size: 20px;
+      border-bottom: 2px solid #858484;
+      text-align: center;
+    }
+    
+    .map-btn {
+      width: 30%;
+      padding: 10px;
+      border: none;
+      background-color: #000000;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    
+    .title{
+      margin-top: 20px;
+      padding: 2%;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 20px;
+    }
+    
+    p{
+      margin-bottom: 10px;
+      font-size: 20px;
+      padding: 2%;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    #titsob{
+      display: flex;
+      justify-content: center;
+      padding: 3%;
+      height: 80px;
+      font-family: Arial, sans-serif;
+      font-size: 40px;
+      color: white;
+      background-color: #333;
+      
+    }
+    
+    p{
+      margin-bottom: 10px;
+      font-size: 20px;
+      padding: 2%;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .piepag{
+      text-align: center;
+      font-size: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    #fundadores{
+      height: 250px;
+      width: 500px;
+    }
+    
+    .bio li{
+      margin-bottom: 10px;
+      font-size: 20px;
+      padding: 1%;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    h2{
+      margin-top: 20px;
+    }
+    
+    main{
+        padding: 0px;
+        margin: 0px;
+        text-align: center;
+    }
+    
+    #titpre{
+      justify-content: center;
+      padding: 3%;
+      height: 80px;
+      font-family: Arial, sans-serif;
+      font-size: 40px;
+      color: white;
+      background-color: #333;
+    }
+    
+    .dlp {
+      margin-bottom: 10px;
+      font-size: 20px;
+      padding: 2%;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    #piepre{
+      text-align: center;
+      font-size: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+
+
+/* Responsividad: mostrar la barra verticalmente en pantallas chicas */
+@media screen and (max-width: 500px) {
+  .navbar {
+    display: none;
+    position: fixed;
+    top: 5%;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.7); /
+  }
+  header{
+    position: fixed;
+    width: 100%;
+  }
+  .navbar a {
+      float: none;
+      display: block;
+  }
+
+  #menuHamburguesa{
+    width: 30px;
+    height: 30px;
+  }
+
+  #fundadores{
+    width: 350px;
+  }
+
+   /* Estilos para pantallas celulares */
+   .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 10px;
+  }
+  .cuotas, .promo, .lotto, .training, .under {
+    width: 100%; /* Ajusta el ancho de las imagenes al 100% */
+  }
+  .brand-logos .logo-gallery img {
+    height: 50px; /* Reduce la altura de los logos en celulares */
+    width: 70px;
+  }
+
+  .container{
     display: flex;
     justify-content: center;
+    flex-direction: column;
+  }
+
+  .logo-gallery {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  #filtros{
+    display: grid;
+  }
+
+  #filtro-barra{
+    display: none;
+    position: fixed; /* Posicionamiento absoluto pero relativo al header */
+    top: 5%; /* Ubicar debajo del header */
+    right:0;  /* Alinear a la izquierda */
+    width: 50%; /* Ancho completo de la pantalla */
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .tituloBarraFiltro{
+    font-size: 16px;
+      font-family: "Varela Round", sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+    color: #fff;
+  }
+
+  .tituloFiltro{
+    display: flex;
     align-items: center;
-    height: 15vh; /*altura*/
+    }
+
+  .calzado{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+  }
+
+  .imgCard{
+    width: 350px;
+  }
+
+  #btnCerrarFiltro{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  #opcion-principal{
+    display: flex;
+    flex-direction: column;
+  }
+
+  /*Formulario Contacto*/
+
+  #formularioRegistro{
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+  }
+
+  .subtituloContacto{
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  #opciones{
+    font-size: 0.8rem;
+    width:90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .checkbox-container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .checkbox-contacto{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  #tituloLabel{
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  #mensaje{
+    align-items: center;
+    width: 95%;
+  }
+
+  #input-container{
+    display: flex;
+    justify-content: center;
+  }
+
+  #tituloDescripcion{
+    text-align: center;
+  }
+
+  #botonFormulario{
+   margin: 0 auto;
+  }
+
+  .formulario__validacion-estado{
+    font-size: 16px;
+    opacity: 0;
+    }
+
+  #formularioIngreso{
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .contenedor-input{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .circle{
+    margin-top: 10px;
+    margin-left: 5px;
+  }
+
 }
+/* Media query para responsividad en dispositivos móviles */
+@media (max-width: 768px) {
+
+  .navbar {
+    display: none;
+    position: fixed;
+    top: 5%;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.7); /
+  }
+  header{
+    position: fixed;
+    width: 100%;
+  }
+  .navbar a {
+      float: none;
+      display: block;
+  }
+
+  #menuHamburguesa{
+    width: 30px;
+    height: 30px;
+  }
+
+  #TituloMarcasDestacadas{
+    margin: 0 auto;
+  }
+
+  #filtro-barra{
+    display: none;
+    position: fixed; /* Posicionamiento absoluto pero relativo al header */
+    top: 5%; /* Ubicar debajo del header */
+    right:0;  /* Alinear a la izquierda */
+    width: 50%; /* Ancho completo de la pantalla */
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 10px;
+  }
+  .cuotas, .promo, .lotto, .training, .under {
+    width: 100%; /* Ajusta el ancho de las imagenes al 100% */
+  }
+  .brand-logos .logo-gallery img {
+    height: 60px; /* Reduce la altura de los logos en celulares */
+    margin: 5px; /* Reduce el espacio entre los logos en celulares */
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+
+  .logo-gallery {
+    display: flex; /* Activa el layout de cuadrícula */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+  }
+
+  h4 {
+      font-size: 1.2em; /* Tamaño de fuente más pequeño para pantallas más pequeñas */
+  }
+
+  #btnCerrarFiltro{
+    display: flex;
+    justify-content: center;
+  }
+
+  #opcion-principal{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .tituloBarraFiltro{
+    font-size: 16px;
+    font-family: "Varela Round", sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+  color: #fff;
+  }
+
+  #formularioRegistro{
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
+
+  #formularioIngreso{
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
+
+  .footer-columns {
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-column {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.formulario__validacion-estado{
+  font-size: 16px;
+  opacity: 0;
+  }
+
+  .contenedor-input{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .circle{
+    margin-top: 10px;
+    margin-left: 5px;
+  }
+}
+
+
+
+@media screen and (min-width: 1200px) {
+
+  #barraNavOtrosDispositivos{
+    display: none;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+  }
+
+  #btnCerrar{
+    display: none;
+  }
+
+  #btnCerrarFiltro{
+    display: none;
+  }
+
+  .tituloBarraFiltro{
+    font-size: 16px;
+      font-family: "Varela Round", sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+    color: #000;
+  }
+
+  .tituloMenuFiltros{
+    color: #000;
+  }
+  #subrayado{
+    color: #000;
+  }
+
+  #opcionPrincipal{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .tituloFiltro{
+    display: flex;
+    align-items: center;
+    }
 
 /* Estilo para el campo de búsqueda */
 .buscar-input {
@@ -70,118 +781,98 @@
     border-radius: 0 5px 5px 0;
     cursor: pointer;
 }
-
-
-/* Responsividad: mostrar la barra verticalmente en pantallas chicas */
-@media screen and (max-width: 500px) {
-  .navbar a {
-      float: none;
-      display: block;
-  }
-}
- 
-
-  nav ul li{
-    display: inline;
-    list-style: none;
-  }
-   
-
-  .banner {
-    width: 100%;
-    height: 60vh;
-    background-image: url('../img/banner.jpg'); 
-    background-position:center;
-    background-repeat: no-repeat;
-    background-size:cover;
-    color: white;
-  }
-
-  /*estilos grid*/
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    grid-gap: 1%; 
-    margin: 1% 2% 2% 2%;
-  }
-  
-  .lotto, .training, .under, .promo, .cuotas {
-    width: 100%; 
-   
-  }
-
-  .cuotas {
-    grid-column: span 3; 
-  }
-  
-  .under {
-    grid-column: span 3;
-    grid-row: 4; 
-  }
-   
-  /*estilos logos*/
-  .brand-logos { 
-    margin-top: 100px;
-    margin-bottom: 100px;
-    padding: 10px 0; 
-    background-color: #ffffff; 
-    text-align: center; }
-
-  .brand-logos h2 { margin-bottom: 15px; }
-    
-  .logo-gallery img {
-        margin: 0px 20px;
-        vertical-align: middle;
-        max-height: 100px;
-        /*border-radius: 100%;  Esto hará que los logos sean completamente redondos */
-    }
-
-   
-/* estilo seccion formulario */
-.contenedor-formularios{
+nav ul li{
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 120vh;
+  list-style: none;
 }
- /*DESDE ACA*/
-form {
-  background-color: #fff;
-  padding: 40px;
-  border-radius: 5px;
-  box-shadow: 0 0 15px rgb(53, 53, 53);
-  align-content: center;
-  width: 50%;
+
+/*estilos grid*/
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-gap: 1%; 
+  margin: 1% 2% 2% 2%;
+}
+
+.lotto, .training, .under, .promo, .cuotas {
+  width: 100%; 
+ 
+}
+
+.cuotas {
+  grid-column: span 3; 
+}
+
+.under {
+  grid-column: span 3;
+  grid-row: 4; 
+}
+ 
+/*estilos logos*/
+.brand-logos { 
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding: 10px 0; 
+  background-color: #ffffff; 
+  text-align: center; 
+}
+
   
-  
+.logo-gallery img {
+      margin: 0px 20px;
+      vertical-align: middle;
+      max-height: 100px;
+      /*border-radius: 100%;  Esto hará que los logos sean completamente redondos */
+}
+/*estilo de la barra de filtros*/
+#productos-container{
+margin-top: 40px;
 }
 
-#tituloRegistro {
-  color: #333;
-  text-align: center;
-  
+#opciones{
+display: flex;
+margin: 0 auto;
+gap: 30px;
 }
 
-.input-container {
-  margin-bottom: 15px;
-  
+.tituloFiltro{
+display: flex;
+align-items: center;
+}
+#imgFiltro{
+margin-left: 5px;
 }
 
-.input-container label {
-  display: block;
-  margin-bottom: 5px;
-
+#productos{
+display: grid;
+grid-template-columns: auto auto;
 }
 
-.input-container input {
-  width: 80%;
-  padding: 10px;
-  border: 1px solid #ddd;
-   border-radius: 5px; 
-    cursor: pointer;
-    
+#opcion-principal{
+display: grid;
+grid-template-columns: auto auto;
 }
 
+.calzado{
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+}
+
+.imgCard{
+width: 300px;
+height: 300px;
+}
+
+#formularioRegistro{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#formularioIngreso{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
 
 #botonFormulario {
   width: 80%;
@@ -191,383 +882,21 @@ form {
   color: white;
   border-radius: 5px;
   cursor: pointer;
-}
-
-#botonFormulario:hover {
-  background-color: #4e4e4e;
-}
-
-.form_input-error{
-  font-size: 12px;
-  margin-bottom: 0px;
-  display: none;
-}
-.form_input-error-activo{
-  display: block;
-
-}
-.formulario__validacion-estado{
-  position: relative;
-  right: 30px;
-  z-index: 100;
-  font-size: 16px;
-  opacity: 0;
-}
-
-.formulario__mensaje {
-  height: 45px;
-  line-height: 45px;
-  
-  padding: 0 15px;
-  border-radius: 3px;
-  display: none;
-  color: #ff0000; 
-  font-weight: bold; /* Hace que el texto sea en negrita para destacarlo */
-  text-align: center; /* Centra el texto en el mensaje */
-  transition: all 0.3s ease; /* Agrega una transición suave al mostrar y ocultar el mensaje */
-  grid-column: 1;
-}
-
-.formulario__mensaje-activo {
-  display: block;
-  animation: fadein 0.5s; /* Agrega una animación de desvanecimiento al mostrar el mensaje */
-}
-
-/* Define la animación de desvanecimiento */
-@keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-.form__mensaje-exito{
-  flex-direction: column;
-  align-items:flex-start;
-  font-size: 14px;
-  color: #119200;
-  display: none;
-}
-.form__mensaje-exito-activo{
-  flex-direction: column;
-  align-items:flex-start;
-  font-size: 14px;
-  color: #119200;
-  display: block;
-}
-
-/*ESTILOS PARA VALIDACIÓN*/
-
-.formulario__grupo-correcto .formulario__validacion-estado{
-  color: #1ed12d;
-  opacity: 1;
-}
-
-.formulario__grupo-incorrecto .formulario__validacion-estado{
-  color: #bb2929;
-  opacity: 1;
-}
-.formulario__grupo-incorrecto .input-container input{
-  border: 3px solid #bb2929;
-
-}
-
-/*hasta aca modifique cosas*/
-
-/*estilo de la barra de filtros*/
-#productos-container{
-margin-top: 40px;
-}
-
-#filtros{
-display: flex;
-justify-content: space-evenly;
-padding: 50px;
-}
-
-#opciones{
-  display: flex;
-  gap: 30px;
-}
-
-.tituloFiltro{
-  display: flex;
-  align-items: center;
-}
-#imgFiltro{
-  margin-left: 5px;
-}
-
-#filtro-barra{
-  width: 12vw;
-  height: 100vh;
-  margin-left: 20px;
-}
-
-.filtro-categoria {
-  list-style: none;
-  margin-bottom: 20px;
-  margin-left: 10px;
-  margin-right: 10px;
-  border-bottom: 1px solid #ddd;
-  padding: 10px 15px;
-}
-
-#productos{
-  display: grid;
-  grid-template-columns: auto auto;
-}
-
-#opcion-principal{
-display: grid;
-grid-template-columns: auto auto;
-}
-
-#subrayado{
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.tituloBarra{
-  font-size: 16px;
-  font-family: "Varela Round", sans-serif;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.calzado{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.imgCard{
-  width: 300px;
-  height: 300px;
-}
-
-
-
-  /*footer*/
-
-  footer {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
-    font-family: 'Arial', sans-serif;
-}
-
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-}
-
-.footer-columns {
-    display: flex;
-    justify-content: space-between;
-}
-
-.footer-column {
-    width: 30%;
-}
-
-.footer-column h4 {
-    color: #f7c08a;
-    margin-bottom: 15px;
-}
-
-.footer-column ul,
-.footer-column ul li {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-column ul li a {
-    color: white;
-    text-decoration: none;
-    margin-bottom: 10px;
-    display: block;
-}
-
-.footer-column ul li a:hover {
-    color: #f7c08a;
-}
-
-.footer-bottom {
-    text-align: center;
-    margin-top: 20px;
-    border-top: 1px solid #777;
-    padding-top: 20px;
-}
-
-@media (max-width: 768px) {
-    .footer-columns {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-column {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-}
-h2, h3 {
-  font-family: 'Arial', sans-serif; /* Fuente moderna y limpia */
-  color: #333; /* Color oscuro para mejor legibilidad */
-  text-transform: uppercase; /* Todas las letras en mayúsculas*/
-  letter-spacing: 1.5px; /* Espaciado entre letras  */
-  margin-bottom: 20px; /* Espacio debajo del título para separarlo del texto */
-  border-bottom: 2px solid #858484; /* Una línea debajo del título  */
-  display: inline-block; /* Hace que la línea de borde se ajuste al texto */
-  padding-bottom: 5px; /* Espacio entre el texto y la línea de borde */
-}
-
-/* Media query para responsividad en dispositivos móviles */
-@media (max-width: 768px) {
-  h4 {
-      font-size: 1.2em; /* Tamaño de fuente más pequeño para pantallas más pequeñas */
   }
-}
 
-/* Estilo para los checkboxes */
-.checkbox-container {
-  display: flex;
-  justify-content: space-between;
-  width: 500px;
-}
-a.boton-estilo {
-  display: inline-block;
-  width: 75%;
-  padding: 10px 20px;
-  font-size: 16px;
-  text-align: center;
-  text-decoration: none;
-  color: #ffffff;
-  background-color: #000000;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-  
-}
-#ensu {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 3%;
-  height: 80px;
-}
+.formulario__validacion-estado{
+    font-size: 16px;
+    opacity: 0;
+  }
 
-#tisu{
-  font-family: Arial, sans-serif;
-  font-size: 40px;color: white;
+  .contenedor-input{
+    display: flex;
+    justify-content: center;
+  }
 
-}
+  .circle{
+    margin-top: 10px;
+    margin-left: 5px;
+  }
 
-#store-list{
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.subenc{
-  margin-top: 15px;
-  font-size: 20px;
-  border-bottom: 2px solid #858484;
-  text-align: center;
-}
-
-.map-btn {
-  width: 30%;
-  padding: 10px;
-  border: none;
-  background-color: #000000;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.title{
-  margin-top: 20px;
-  padding: 2%;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
-}
-
-p{
-  margin-bottom: 10px;
-  font-size: 20px;
-  padding: 2%;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-#containersobre{
-  width: 100%;
-  margin: auto;
-  text-align: center;
-  display: flex;
-}
-
-#titsob{
-  justify-content: center;
-  padding: 3%;
-  height: 80px;
-  font-family: Arial, sans-serif;
-  font-size: 40px;
-  color: white;
-  background-color: #333;
-  
-}
-
-p{
-  margin-bottom: 10px;
-  font-size: 20px;
-  padding: 2%;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.piepag{
-  text-align: center;
-  font-size: 25px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-#fundadores{
-  height: 250px;
-  width: 500px;
-}
-
-.bio li{
-  margin-bottom: 10px;
-  font-size: 20px;
-  padding: 1%;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-h2{
-  margin-top: 20px;
-}
-
-main{
-    padding: 0px;
-    margin: 0px;
-    text-align: center;
-}
-
-#titpre{
-  justify-content: center;
-  padding: 3%;
-  height: 80px;
-  font-family: Arial, sans-serif;
-  font-size: 40px;
-  color: white;
-  background-color: #333;
-}
-
-.dlp {
-  margin-bottom: 10px;
-  font-size: 20px;
-  padding: 2%;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-#piepre{
-  text-align: center;
-  font-size: 25px;
-  font-family: Arial, Helvetica, sans-serif;
 }
